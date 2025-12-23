@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  color: #132238;
+  background-color: #ffffff;
+}
+
+@layer utilities {
+  .bg-highlight {
+    background: linear-gradient(to top, #ffc8c8 40%, transparent 40%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .introduction-profile-background {
+    background: radial-gradient(circle at 12% 100%, #ffe2b0f5 1% 5px, transparent 15%),
+      radial-gradient(circle at 95% -15%, #da4df166 5%, transparent 30%),
+      radial-gradient(circle at center right, #c4f5e9b2 2%, transparent 35%);
+  }
+
+  .blog-background {
+    background: radial-gradient(circle at 0% 50%, #ffe2b0cc 1%, transparent 25%),
+      radial-gradient(circle at 100% 50%, #da4df166 1%, transparent 25%);
+  }
+
+  .section-title {
+    @apply text-3xl sm:text-4xl md:text-5xl font-semibold md:font-semibold;
+  }
+
+  .content {
+    @apply w-full max-w-container mx-auto px-4;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9929fb;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #650fa0;
+}
+
+/* Swiper Pagination Custom Styles */
+.swiper-pagination-bullet {
+  background-color: #717377;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #210c33 !important;
+  width: 30px;
+  height: 8px;
+  border-radius: 100px;
+  transition: 0.4s;
+}
